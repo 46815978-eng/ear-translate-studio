@@ -1,0 +1,72 @@
+{
+  "total_files": 52,
+  "modules": {
+    "docker": [
+      "docker-compose.yml"
+    ],
+    "database": [
+      "database\\init.sql"
+    ],
+    "backend": [
+      "backend\\auth.py",
+      "backend\\config.py",
+      "backend\\main.py",
+      "backend\\models.py",
+      "backend\\requirements.txt",
+      "backend\\run.py",
+      "backend\\scheduler.py",
+      "backend\\schemas.py",
+      "backend\\routers\\courses.py",
+      "backend\\routers\\listening.py",
+      "backend\\routers\\membership.py",
+      "backend\\routers\\review.py",
+      "backend\\routers\\study.py",
+      "backend\\tasks\\audio_tasks.py",
+      "backend\\tasks\\review_tasks.py",
+      "backend\\tasks\\__init__.py"
+    ],
+    "frontend": [
+      "frontend\\pubspec.yaml",
+      "frontend\\android\\build.gradle",
+      "frontend\\android\\gradle.properties",
+      "frontend\\android\\settings.gradle",
+      "frontend\\android\\app\\build.gradle",
+      "frontend\\lib\\main.dart",
+      "frontend\\lib\\config\\api_config.dart",
+      "frontend\\lib\\config\\theme.dart",
+      "frontend\\lib\\models\\course_model.dart",
+      "frontend\\lib\\models\\membership_model.dart",
+      "frontend\\lib\\models\\study_record_model.dart",
+      "frontend\\lib\\models\\user_model.dart",
+      "frontend\\lib\\providers\\auth_provider.dart",
+      "frontend\\lib\\providers\\course_provider.dart",
+      "frontend\\lib\\providers\\membership_provider.dart",
+      "frontend\\lib\\providers\\study_provider.dart",
+      "frontend\\lib\\screens\\course_detail_screen.dart",
+      "frontend\\lib\\screens\\course_list_screen.dart",
+      "frontend\\lib\\screens\\home_screen.dart",
+      "frontend\\lib\\screens\\listening_screen.dart",
+      "frontend\\lib\\screens\\login_screen.dart",
+      "frontend\\lib\\screens\\membership_screen.dart",
+      "frontend\\lib\\screens\\payment_screen.dart",
+      "frontend\\lib\\screens\\profile_screen.dart",
+      "frontend\\lib\\screens\\register_screen.dart",
+      "frontend\\lib\\screens\\review_screen.dart",
+      "frontend\\lib\\screens\\splash_screen.dart",
+      "frontend\\lib\\screens\\study_stats_screen.dart",
+      "frontend\\lib\\services\\api_service.dart",
+      "frontend\\lib\\widgets\\common_widgets.dart"
+    ],
+    "render": [
+      "render\\ffmpeg_render.py"
+    ],
+    "scripts": [
+      "scripts\\deploy.sh",
+      "scripts\\test_pipeline.ps1"
+    ],
+    "docs": [
+      "docs\\commercial_migration.md"
+    ]
+  },
+  "generation_time": "2026-07-03 12:00:23"
+}
