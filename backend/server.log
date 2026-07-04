@@ -1,0 +1,19 @@
+INFO:     127.0.0.1:49501 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49502 - "POST /auth/register HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:49503 - "POST /auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49504 - "GET /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49505 - "GET /courses/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49506 - "GET /courses/1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49507 - "GET /courses/1/sections HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49508 - "GET /membership/plans HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49509 - "POST /membership/sandpay/1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49510 - "POST /membership/purchase HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:49511 - "GET /listening/courses HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49512 - "GET /listening/subtitles/1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49513 - "GET /review/due HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:49514 - "GET /study/total HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49515 - "POST /study/record HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:49527 - "POST /auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49528 - "POST /membership/purchase HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49529 - "POST /study/record HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:49530 - "GET /review/due HTTP/1.1" 500 Internal Server Error
