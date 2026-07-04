@@ -1,0 +1,39 @@
+name: Build iOS (no codesign)
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build-ios:
+    runs-on: macos-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.29.2'
+          channel: 'stable'
+
+      - name: Get dependencies
+        working-directory: frontend
+        run: flutter pub get
+
+      - name: Install CocoaPods
+        working-directory: frontend/ios
+        run: |
+          sudo gem install cocoapods
+          pod install
+
+      - name: Build iOS
+        working-directory: frontend
+        run: flutter build ios --release --no-codesign
+
+      - name: Zip and upload
+        uses: actions/upload-artifact@v4
+        with:
+          name: ios-app
+          path: frontend/build/ios/iphoneos/Runner.app
