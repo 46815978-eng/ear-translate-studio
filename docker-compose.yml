@@ -1,0 +1,65 @@
+services:
+  # ====================================
+  # 哇学社基础设施 (Docker Desktop)
+  # ====================================
+  # 如果 Docker 不可用，可用本地安装替代:
+  # MySQL: winget install MySQL.MySQL
+  # Redis: 下载 Redis-x64-3.2.100.zip 解压运行
+  # LibreTranslate: 需要 Docker
+  # MinIO: 需要 Docker (可用本地文件存储替代)
+
+  mysql:
+    image: mysql:8.0
+    container_name: woxueshe-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root123
+      MYSQL_DATABASE: woxueshe
+    volumes:
+      - mysql-data:/var/lib/mysql
+      - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - "3307:3306"
+    command: --default-authentication-plugin=mysql_native_password --sql_mode=""
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-proot123"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:7
+    container_name: woxueshe-redis
+    ports:
+      - "6380:6379"
+    volumes:
+      - redis-data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  libretranslate:
+    image: libretranslate/libretranslate:latest
+    container_name: woxueshe-translate
+    ports:
+      - "5000:5000"
+    command: --load-only en,zh --ssl 0
+
+  minio:
+    image: minio/minio:latest
+    container_name: woxueshe-minio
+    environment:
+      MINIO_ROOT_USER: minioadmin
+      MINIO_ROOT_PASSWORD: minioadmin
+    volumes:
+      - minio-data:/data
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    command: server /data --console-address ":9001"
+
+volumes:
+  mysql-data:
+  redis-data:
+  minio-data:
