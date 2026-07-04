@@ -1,0 +1,29 @@
+﻿1
+00:00:00,000 --> 00:00:05,000
+Welcome to Woxueshe English Learning App.
+欢迎来到哇学社英语学习APP。
+
+2
+00:00:05,000 --> 00:00:10,000
+Today we will practice your listening skills.
+今天我们来练习你的听力技能。
+
+3
+00:00:10,000 --> 00:00:15,000
+Listen carefully and repeat after the speaker.
+仔细听并跟着朗读者重复。
+
+4
+00:00:15,000 --> 00:00:20,000
+Our brain learns best through spaced repetition.
+我们的大脑通过间隔重复学习效果最好。
+
+5
+00:00:20,000 --> 00:00:25,000
+Practice makes perfect. Keep learning every day.
+熟能生巧。坚持每天学习。
+
+6
+00:00:25,000 --> 00:00:30,000
+Thank you for using Woxueshe. Good luck!
+感谢使用哇学社。祝你好运！
