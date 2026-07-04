@@ -1,0 +1,2 @@
+C:/Users/Administrator/.qclaw/workspace-x5kuz49xple53hhg/woxueshe/frontend/android/app/.cxx/RelWithDebInfo/6k4a3m6z/arm64-v8a/CMakeFiles/edit_cache.dir
+C:/Users/Administrator/.qclaw/workspace-x5kuz49xple53hhg/woxueshe/frontend/android/app/.cxx/RelWithDebInfo/6k4a3m6z/arm64-v8a/CMakeFiles/rebuild_cache.dir
