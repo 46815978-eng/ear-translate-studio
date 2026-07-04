@@ -18,6 +18,16 @@ jobs:
           flutter-version: '3.29.2'
           channel: 'stable'
 
+      # CRITICAL: These files were generated on Windows and contain Windows
+      # absolute paths (e.g. C:\flutter). The macOS runner cannot use them.
+      # Remove them so Flutter regenerates them with macOS paths.
+      - name: Clean Windows-generated iOS files
+        run: |
+          rm -f frontend/ios/Flutter/Generated.xcconfig
+          rm -f frontend/ios/Flutter/flutter_export_environment.sh
+          rm -f frontend/ios/Runner/GeneratedPluginRegistrant.h
+          rm -f frontend/ios/Runner/GeneratedPluginRegistrant.m
+
       - name: Get dependencies
         working-directory: frontend
         run: flutter pub get
@@ -32,8 +42,13 @@ jobs:
         working-directory: frontend
         run: flutter build ios --release --no-codesign
 
-      - name: Zip and upload
+      - name: Zip Runner.app
+        working-directory: frontend/build/ios/iphoneos
+        run: |
+          zip -r Runner.zip Runner.app
+
+      - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: ios-app
-          path: frontend/build/ios/iphoneos/Runner.app
+          name: ios-runner-app
+          path: frontend/build/ios/iphoneos/Runner.zip
