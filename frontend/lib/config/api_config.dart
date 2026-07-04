@@ -1,0 +1,16 @@
+const String baseUrl = 'http://localhost:8002';
+const String loginUrl = '$baseUrl/auth/login';
+const String registerUrl = '$baseUrl/auth/register';
+const String refreshTokenUrl = '$baseUrl/auth/refresh';
+const String coursesUrl = '$baseUrl/courses';
+const String courseSectionsUrl = '$baseUrl/courses';
+const String membershipPlansUrl = '$baseUrl/membership/plans';
+const String purchaseMembershipUrl = '$baseUrl/membership/purchase';
+const String userMembershipUrl = '$baseUrl/membership/my';
+const String studyRecordsUrl = '$baseUrl/study';
+const String listeningLogsUrl = '$baseUrl/listening';
+const String reviewRecordsUrl = '$baseUrl/review';
+const String nextReviewUrl = '$baseUrl/review/due';
+const String paymentUrl = '$baseUrl/membership/sandpay';
+const String profileUrl = '$baseUrl/auth/me';
+const String studyStatsUrl = '$baseUrl/study';
